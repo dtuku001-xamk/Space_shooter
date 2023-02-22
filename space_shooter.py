@@ -6,7 +6,7 @@ pygame.font.init()
 
 WIDTH, HEIGHT = 1000, 1000
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Space Shooter Tutorial")
+pygame.display.set_caption("Space Shooter")
 
 RED_SPACESHIP = pygame.image.load(os.path.join("assets", "pixel_ship_red_small.png"))
 GREEN_SPACESHIP = pygame.image.load(os.path.join("assets", "pixel_ship_green_small.png"))
@@ -124,10 +124,10 @@ class Player(Ship):
 #child
 class Enemy(Ship):
     COLOR_MAP = {
-                "red": (RED_SPACESHIP, RED_LASER),
-                "green": (GREEN_SPACESHIP, GREEN_LASER),
-                "blue": (BLUE_SPACESHIP, BLUE_LASER)
-                }
+        "red": (RED_SPACESHIP, RED_LASER),
+        "green": (GREEN_SPACESHIP, GREEN_LASER),
+        "blue": (BLUE_SPACESHIP, BLUE_LASER)
+    }
 
     def __init__(self, x, y, color, health=100):
         super().__init__(x, y, health)
